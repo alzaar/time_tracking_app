@@ -42,7 +42,7 @@ class EditableTimerList extends React.Component {
 
 class EditableTimer extends React.Component {
   render() {
-    if (this.props.editFormOpen)
+    if (this.props.editFormOpen) {
       return (
         <TimerForm
           title={this.props.title}
@@ -133,6 +133,12 @@ class Timer extends React.Component {
         <div className="ui bottom attached blue basic button" >
           Start
         </div>
+      </div>
     );
   }
 }
+
+ReactDOM.render(
+  <TimersDashboard />,
+  document.getElementById('content')
+);
